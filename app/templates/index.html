@@ -8,10 +8,17 @@
 </head>
 <body>
     <h1>Currículos</h1>
-    <ul>
+    <table>
+        <tr>
+            <th>Nome</th>
+            <th>Email</th>
+        </tr>
         {% for l in lista %}
-        <li>{{ l }}</li>
+        <tr>
+            <td>{{ l.nome }}</td>
+            <td>{{ l.email }}</td>
+        </tr>
         {% endfor %}
-    </ul>
+    <table>
 </body>
 </html>

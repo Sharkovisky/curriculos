@@ -17,5 +17,5 @@ from app.models.tables import Usuario
 
 @app.route('/home')
 def home():
-    l = ['Programador front-end', 'Programador back-end', 'Devops']
+    l = Usuario.query.all()
     return render_template('index.html', lista=l)
