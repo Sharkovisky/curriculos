@@ -15,7 +15,5 @@ manager.add_command('db', MigrateCommand)
 
 from app.models.tables import Usuario
 
-@app.route('/home')
-def home():
-    l = Usuario.query.all()
-    return render_template('index.html', lista=l)
+from app.controllers import usuarios
+from app.controllers import instituicoes
